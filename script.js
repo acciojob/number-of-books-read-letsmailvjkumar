@@ -18,11 +18,19 @@ const library = [
 
 const numberOfBooksRead = () => {
   // write your code here
-	let count=0     
-	if(library.readingStatus === true){
-		count++;
+	let count=0
+	let books = Object.keys(library)
+	for(let i=0;i<books.length;i++){
+	const bookKey = books[i];
+    if (library[bookKey].readingStatus === true) {
+      count++;
+    }
+  
 	}
 	return count;
+	
 };
 
 // Do not change the code below
+alert(numberOfBooksRead());
+
